@@ -1,0 +1,29 @@
+{% extends "base.template.html" %}
+
+{% block content %}
+{% if doc.title %}
+<h1 class="api-profile-header-heading">{$ doc.title $}</h1>
+{$ doc.description | marked $}
+<div class="component-breakdown">
+    {% for componentGroup in doc.componentGroups %}
+    <div>
+        {% for component in componentGroup.components %}
+        <h3 class="component-heading"><a ui-sref="{$ component.title $}">{$ component.title $}</a></h3>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<h1 class="api-profile-header-heading">{$ doc.name $}</h1>
+{$ doc.description | marked $}
+<div class="component-breakdown">
+    {% for componentGroup in doc.componentGroups %}
+    <div>
+        {% for component in componentGroup.components %}
+        <h3 class="component-heading"><a ui-sref="{$ component.title $}">{$ component.title $}</a></h3>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

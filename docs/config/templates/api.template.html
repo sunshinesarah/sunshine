@@ -1,0 +1,22 @@
+{% extends "base.template.html" %}
+
+{% block content %}
+
+{% block header %}
+
+{% if doc.title %}
+<h1 class="api-profile-header-heading">{$ doc.title $}</h1>
+{% else %}
+<h1 class="api-profile-header-heading">{$ doc.name $}</h1>
+{% endif %}
+
+{% endblock %}
+
+{% block description %}
+<div class="api-profile-description">
+    {$ doc.description | marked $}
+</div>
+{% endblock %}
+
+{% endblock %}
+

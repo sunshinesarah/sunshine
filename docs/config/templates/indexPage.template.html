@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="docs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sunshine Japanese Docs</title>
+    <link rel="stylesheet" href="src/bootstrap.min.css">
+    <style type="text/css">
+        body {
+            overflow-x: hidden;
+        }
+        #wrapper {
+            padding-left: 0;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            min-height: 100%;
+            position: relative;
+            padding-bottom: 120px;
+        }
+
+        #sidebar-wrapper {
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        .sidebar-nav {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar-nav li{
+            display: block;
+            text-indent: 3px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <span class="navbar-brand">Sunshine Japanese Docs</span>
+        </div>
+        <ul class="navbar navbar-nav">
+            <li><a ui-sref="guide">Guide</a></li>
+            <li><a ui-sref="api">Api</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9" ui-view="main"></div>
+        <div id="sidebar-wrapper" class="col-sm-3" ui-view="sidebar"></div>
+    </div>
+</div>
+
+<script src="src/angular.js"></script>
+<script src="src/angular-ui-router.js"></script>
+<script src="src/app.module.js"></script>
+<script src="src/app.config.js"></script>
+<script src="src/api.js"></script>
+<script src="src/guide.js"></script>
+<script src="src/api-data.js"></script>
+<script src="src/guide-data.js"></script>
+
+</body>
+</html>
