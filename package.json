@@ -1,0 +1,52 @@
+{
+  "name": "sunshine",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A project to learn Japanese",
+  "repository": "https://github.com/sunshinesarah/sunshine",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "dgeni": "^0.4.7",
+    "dgeni-packages": "^0.17.2",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-open": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-protractor": "^4.1.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-coffee": "^2.3.4",
+    "gulp-connect": "^5.0.0",
+    "http-server": "^0.9.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.8",
+    "karma-junit-reporter": "^0.4.1",
+    "protractor": "^4.0.9",
+    "run-sequence": "^1.2.2",
+    "del": "^2.2.2"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js",
+    "test-single-run": "karma start karma.conf.js --single-run",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "assets"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^2.0.7"
+    }
+  },
+  "dependencies": {
+    "angular-material": "^1.1.4"
+  }
+}
